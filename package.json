@@ -1,0 +1,25 @@
+{
+  "name": "nodejs_rpc_rmq",
+  "version": "1.0.0",
+  "description": "NodeJS Microservice RPC Communication",
+  "main": "index.js",
+  "scripts": {
+    "customer": "nodemon src/customer.js",
+    "product": "nodemon src/product.js",
+    "start": "concurrently --kill-others \"yarn run customer\" \"yarn run product\""
+  },
+  "keywords": [
+    "nodejs_rpc_communication"
+  ],
+  "author": "Code with Jay",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "express": "^4.18.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19"
+  }
+}
